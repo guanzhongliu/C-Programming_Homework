@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Roger Liu\Desktop\homework"
+CMAKE_SOURCE_DIR = "C:\Users\Roger Liu\Desktop\Programming-practice\homework"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug\CMakeFiles" "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug\CMakeFiles" "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -122,32 +122,32 @@ homework/fast:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/build
 .PHONY : homework/fast
 
-main.obj: main.cpp.obj
+Part1/main.obj: Part1/main.cpp.obj
 
-.PHONY : main.obj
+.PHONY : Part1/main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+Part1/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Part1/main.cpp.obj
+.PHONY : Part1/main.cpp.obj
 
-main.i: main.cpp.i
+Part1/main.i: Part1/main.cpp.i
 
-.PHONY : main.i
+.PHONY : Part1/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/main.cpp.i
-.PHONY : main.cpp.i
+Part1/main.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Part1/main.cpp.i
+.PHONY : Part1/main.cpp.i
 
-main.s: main.cpp.s
+Part1/main.s: Part1/main.cpp.s
 
-.PHONY : main.s
+.PHONY : Part1/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/main.cpp.s
-.PHONY : main.cpp.s
+Part1/main.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Part1/main.cpp.s
+.PHONY : Part1/main.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... homework
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... Part1/main.obj
+	@echo ... Part1/main.i
+	@echo ... Part1/main.s
 .PHONY : help
 
 

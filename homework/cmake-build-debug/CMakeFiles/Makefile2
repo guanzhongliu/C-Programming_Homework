@@ -58,10 +58,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Roger Liu\Desktop\homework"
+CMAKE_SOURCE_DIR = "C:\Users\Roger Liu\Desktop\Programming-practice\homework"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug"
 
 #=============================================================================
 # Target rules for target CMakeFiles/homework.dir
@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug"
 CMakeFiles/homework.dir/all:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/depend
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Roger Liu\Desktop\homework\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target homework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target homework"
 .PHONY : CMakeFiles/homework.dir/all
 
 # Include target in all.
@@ -80,9 +80,9 @@ all: CMakeFiles/homework.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/homework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug\CMakeFiles" 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/homework.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\homework\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Roger Liu\Desktop\Programming-practice\homework\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/homework.dir/rule
 
 # Convenience name for target.
