@@ -80,7 +80,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Part1/main.cpp">
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.cpp">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.cpp">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.h">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/main.cpp">
 			<Option target="homework"/>
 		</Unit>
 		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/CMakeLists.txt">

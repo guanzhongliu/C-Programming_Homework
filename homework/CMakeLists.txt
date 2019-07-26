@@ -3,4 +3,4 @@ project(homework)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(homework Part1/main.cpp)
+add_executable(homework main.cpp Profile.cpp Profile.h Subject.cpp Subject.h)

@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/homework.dir/Part1/main.cpp.obj"
+  "CMakeFiles/homework.dir/main.cpp.obj"
+  "CMakeFiles/homework.dir/Profile.cpp.obj"
+  "CMakeFiles/homework.dir/Subject.cpp.obj"
   "homework.pdb"
   "homework.exe"
   "homework.exe.manifest"

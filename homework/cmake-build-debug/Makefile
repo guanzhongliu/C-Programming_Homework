@@ -122,32 +122,86 @@ homework/fast:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/build
 .PHONY : homework/fast
 
-Part1/main.obj: Part1/main.cpp.obj
+Profile.obj: Profile.cpp.obj
 
-.PHONY : Part1/main.obj
+.PHONY : Profile.obj
 
 # target to build an object file
-Part1/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Part1/main.cpp.obj
-.PHONY : Part1/main.cpp.obj
+Profile.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Profile.cpp.obj
+.PHONY : Profile.cpp.obj
 
-Part1/main.i: Part1/main.cpp.i
+Profile.i: Profile.cpp.i
 
-.PHONY : Part1/main.i
+.PHONY : Profile.i
 
 # target to preprocess a source file
-Part1/main.cpp.i:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Part1/main.cpp.i
-.PHONY : Part1/main.cpp.i
+Profile.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Profile.cpp.i
+.PHONY : Profile.cpp.i
 
-Part1/main.s: Part1/main.cpp.s
+Profile.s: Profile.cpp.s
 
-.PHONY : Part1/main.s
+.PHONY : Profile.s
 
 # target to generate assembly for a file
-Part1/main.cpp.s:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Part1/main.cpp.s
-.PHONY : Part1/main.cpp.s
+Profile.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Profile.cpp.s
+.PHONY : Profile.cpp.s
+
+Subject.obj: Subject.cpp.obj
+
+.PHONY : Subject.obj
+
+# target to build an object file
+Subject.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Subject.cpp.obj
+.PHONY : Subject.cpp.obj
+
+Subject.i: Subject.cpp.i
+
+.PHONY : Subject.i
+
+# target to preprocess a source file
+Subject.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Subject.cpp.i
+.PHONY : Subject.cpp.i
+
+Subject.s: Subject.cpp.s
+
+.PHONY : Subject.s
+
+# target to generate assembly for a file
+Subject.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Subject.cpp.s
+.PHONY : Subject.cpp.s
+
+main.obj: main.cpp.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -158,9 +212,15 @@ help:
 	@echo ... homework
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Part1/main.obj
-	@echo ... Part1/main.i
-	@echo ... Part1/main.s
+	@echo ... Profile.obj
+	@echo ... Profile.i
+	@echo ... Profile.s
+	@echo ... Subject.obj
+	@echo ... Subject.i
+	@echo ... Subject.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
