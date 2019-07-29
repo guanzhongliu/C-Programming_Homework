@@ -27,6 +27,10 @@ public:
     void addInformationByTap() override;
 
     void accountScore(std::string name) override;
+
+    void addStudent() override;
+
+    void searchStudent() override;
 };
 
 

@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/homework.dir/main.cpp.obj"
   "CMakeFiles/homework.dir/Profile.cpp.obj"
   "CMakeFiles/homework.dir/Subject.cpp.obj"
-  "CMakeFiles/homework.dir/Method.cpp.obj"
   "CMakeFiles/homework.dir/GradeSystem.cpp.obj"
   "CMakeFiles/homework.dir/StacticalScore.cpp.obj"
   "homework.pdb"

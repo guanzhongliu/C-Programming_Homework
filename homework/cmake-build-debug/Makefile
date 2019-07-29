@@ -149,33 +149,6 @@ GradeSystem.cpp.s:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeSystem.cpp.s
 .PHONY : GradeSystem.cpp.s
 
-Method.obj: Method.cpp.obj
-
-.PHONY : Method.obj
-
-# target to build an object file
-Method.cpp.obj:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Method.cpp.obj
-.PHONY : Method.cpp.obj
-
-Method.i: Method.cpp.i
-
-.PHONY : Method.i
-
-# target to preprocess a source file
-Method.cpp.i:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Method.cpp.i
-.PHONY : Method.cpp.i
-
-Method.s: Method.cpp.s
-
-.PHONY : Method.s
-
-# target to generate assembly for a file
-Method.cpp.s:
-	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Method.cpp.s
-.PHONY : Method.cpp.s
-
 Profile.obj: Profile.cpp.obj
 
 .PHONY : Profile.obj
@@ -296,9 +269,6 @@ help:
 	@echo ... GradeSystem.obj
 	@echo ... GradeSystem.i
 	@echo ... GradeSystem.s
-	@echo ... Method.obj
-	@echo ... Method.i
-	@echo ... Method.s
 	@echo ... Profile.obj
 	@echo ... Profile.i
 	@echo ... Profile.s

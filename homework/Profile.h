@@ -14,6 +14,7 @@ private:
     std::vector<Subject> elective;
     double overall_GPA;
     double overall_grade;
+    int overall_rank;
 public:
     std::string name;
     std::string id;

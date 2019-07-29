@@ -12,26 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GradeSystem.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Method.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Method.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StacticalScore.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StacticalScore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Part1/practice_1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Part1/practice_1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Part1/practice_7.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Part1/practice_7.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Part1/practice_functions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Part1/practice_functions.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GradeSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Method.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Method.h" beforeDir="false" afterPath="$PROJECT_DIR$/Method.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Subject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Subject.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Subject.h" beforeDir="false" afterPath="$PROJECT_DIR$/Subject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/build.make" afterDir="false" />
@@ -65,6 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1OdDqRBc2CsLKVJKrHIPE8uqln1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -131,7 +123,7 @@
       <workItem from="1564378193324" duration="89000" />
       <workItem from="1564378568856" duration="51000" />
       <workItem from="1564381039966" duration="622000" />
-      <workItem from="1564383889005" duration="757000" />
+      <workItem from="1564383889005" duration="7881000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
@@ -147,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564143699451</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mid">
+      <created>1564384694160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564384694160</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +168,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一部分完成" />
     <MESSAGE value="成绩管理基本类完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="成绩管理基本类完成" />
+    <MESSAGE value="mid" />
+    <option name="LAST_COMMIT_MESSAGE" value="mid" />
   </component>
 </project>

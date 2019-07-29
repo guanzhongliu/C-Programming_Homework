@@ -78,5 +78,13 @@ double Subject::getGPA() {
     return GPA;
 }
 
+void Subject::setRank(int r) {
+    rank = r;
+}
+
+int Subject::getRank() {
+    return rank;
+}
+
 
 

@@ -14,6 +14,7 @@ private:    // 将成绩等不希望被直接访问的内容封装起来
     double credit;  // 科目学分
     int grade;      // 科目成绩
     double GPA;     // 科目绩点
+    int rank;
 public:
     std::string name;   // 科目名称
     int dir;      // 科目类别，用于区分其是大家都上的必修还是自选的选修
@@ -41,6 +42,10 @@ public:
     int getGrade();
 
     double getGPA();
+
+    void setRank(int r);
+
+    int getRank();
 };
 
 

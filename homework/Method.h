@@ -12,12 +12,13 @@
 class Method {
 public:
     virtual void introduction() = 0;
+    virtual void addStudent() = 0;
     virtual void searchById() = 0;
     virtual void searchByName() = 0;
     virtual void addInformationByFile() = 0;
     virtual void addInformationByTap() = 0;
     virtual void accountScore(std::string name) = 0;
-
+    virtual void searchStudent() = 0;
 };
 
 

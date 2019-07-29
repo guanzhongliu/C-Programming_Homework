@@ -7,14 +7,26 @@
     设计发散功能可作为加分项。
  */
 #include "bits/stdc++.h"
-#include "Profile.h"
-#include "Subject.h"
+#include "GradeSystem.h"
 
 using namespace std;
 
 int main() {
+    char move;  // 增强健壮性
+    GradeSystem gradeSystem;     // 实例化一个成绩管理系统
+    gradeSystem.introduction();
+    while (cin >> move) {
+        switch (move - '0') {
+            case 0:
+                return 0;
+            case 1:
+                gradeSystem.addStudent();
+                break;
+            case 2:
+                gradeSystem.searchStudent();
+                break;
 
-
-
+        }
+    }
     return 0;
 }

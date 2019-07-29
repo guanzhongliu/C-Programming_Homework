@@ -6,11 +6,35 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp
+GradeSystem.h
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.h
+iostream
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/iostream
+
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.h
+vector
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/vector
+Method.h
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/Method.h
+Profile.h
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h
+StacticalScore.h
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticalScore.h
+
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/Method.h
+string
+-
+
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h
 bits/stdc++.h
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/bits/stdc++.h
 Subject.h
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.h
+
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticalScore.h
+string
+-
 
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.h
 bits/stdc++.h
@@ -19,8 +43,6 @@ C:/Users/Roger Liu/Desktop/Programming-practice/homework/bits/stdc++.h
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/main.cpp
 bits/stdc++.h
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/bits/stdc++.h
-Profile.h
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h
-Subject.h
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.h
+GradeSystem.h
+C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.h
 
