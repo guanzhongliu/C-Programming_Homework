@@ -122,6 +122,60 @@ homework/fast:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/build
 .PHONY : homework/fast
 
+GradeSystem.obj: GradeSystem.cpp.obj
+
+.PHONY : GradeSystem.obj
+
+# target to build an object file
+GradeSystem.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeSystem.cpp.obj
+.PHONY : GradeSystem.cpp.obj
+
+GradeSystem.i: GradeSystem.cpp.i
+
+.PHONY : GradeSystem.i
+
+# target to preprocess a source file
+GradeSystem.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeSystem.cpp.i
+.PHONY : GradeSystem.cpp.i
+
+GradeSystem.s: GradeSystem.cpp.s
+
+.PHONY : GradeSystem.s
+
+# target to generate assembly for a file
+GradeSystem.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeSystem.cpp.s
+.PHONY : GradeSystem.cpp.s
+
+Method.obj: Method.cpp.obj
+
+.PHONY : Method.obj
+
+# target to build an object file
+Method.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Method.cpp.obj
+.PHONY : Method.cpp.obj
+
+Method.i: Method.cpp.i
+
+.PHONY : Method.i
+
+# target to preprocess a source file
+Method.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Method.cpp.i
+.PHONY : Method.cpp.i
+
+Method.s: Method.cpp.s
+
+.PHONY : Method.s
+
+# target to generate assembly for a file
+Method.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Method.cpp.s
+.PHONY : Method.cpp.s
+
 Profile.obj: Profile.cpp.obj
 
 .PHONY : Profile.obj
@@ -148,6 +202,33 @@ Profile.s: Profile.cpp.s
 Profile.cpp.s:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/Profile.cpp.s
 .PHONY : Profile.cpp.s
+
+StacticalScore.obj: StacticalScore.cpp.obj
+
+.PHONY : StacticalScore.obj
+
+# target to build an object file
+StacticalScore.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/StacticalScore.cpp.obj
+.PHONY : StacticalScore.cpp.obj
+
+StacticalScore.i: StacticalScore.cpp.i
+
+.PHONY : StacticalScore.i
+
+# target to preprocess a source file
+StacticalScore.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/StacticalScore.cpp.i
+.PHONY : StacticalScore.cpp.i
+
+StacticalScore.s: StacticalScore.cpp.s
+
+.PHONY : StacticalScore.s
+
+# target to generate assembly for a file
+StacticalScore.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/StacticalScore.cpp.s
+.PHONY : StacticalScore.cpp.s
 
 Subject.obj: Subject.cpp.obj
 
@@ -212,9 +293,18 @@ help:
 	@echo ... homework
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... GradeSystem.obj
+	@echo ... GradeSystem.i
+	@echo ... GradeSystem.s
+	@echo ... Method.obj
+	@echo ... Method.i
+	@echo ... Method.s
 	@echo ... Profile.obj
 	@echo ... Profile.i
 	@echo ... Profile.s
+	@echo ... StacticalScore.obj
+	@echo ... StacticalScore.i
+	@echo ... StacticalScore.s
 	@echo ... Subject.obj
 	@echo ... Subject.i
 	@echo ... Subject.s

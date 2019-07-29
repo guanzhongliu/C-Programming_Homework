@@ -80,10 +80,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.h">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Method.cpp">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Method.h">
+			<Option target="homework"/>
+		</Unit>
 		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.cpp">
 			<Option target="homework"/>
 		</Unit>
 		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticalScore.cpp">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticalScore.h">
 			<Option target="homework"/>
 		</Unit>
 		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.cpp">

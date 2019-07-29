@@ -23,7 +23,7 @@ ll mult_mod(ll a, ll b, ll c) {
             if (ret > c)
                 ret -= c;   //直接取模慢很多
         }
-        temp << 1;
+        temp <<= 1;
         if (temp > c)
             temp -= c;
         b >>= 1;

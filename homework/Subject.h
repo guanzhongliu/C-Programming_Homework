@@ -31,7 +31,8 @@ public:
 
     void setSubject(std::string n, double c, int g, double G, int dir);
 
-    void setSubject(std::string n, double c, int g, int dir);  // 加入出现需要自行计算GPA的情况，故重载函数
+    void setSubject(std::string n, double c, int g, int dir);
+    // 加入出现需要自行计算GPA的情况，故重载函数
 
     std::string getName();
 

@@ -9,7 +9,7 @@ int main() {
     cout << "Please give me a string, I'll tell you if it's a palindrome:" << endl;
     string a;
     cin >> a;
-    for (int i = 0; i < (a.length() - 1) / 2; i++) {
+    for (int i = 0; i <= (a.length() - 1) / 2; i++) {
         if (a[i] != a[a.length() - 1 - i]) {
             std::cout << a << " is not a palindrome." << std::endl;
             return 0;

@@ -2,16 +2,18 @@
 // Created by Septieme on 2019/7/26.
 //
 /**
- * 用户界面不作为评分项（用Dos界面即可），评分项包括代码风格、注释完整性、功能完整性、文档完整性。
-   基于面向对象设计并实现学生成绩管理系统，用于统计单科成绩、加权分计算、年级排名等。
-    设计发散功能可作为加分项。
+ * �û����治��Ϊ�������Dos���漴�ɣ������������������ע�������ԡ����������ԡ��ĵ������ԡ�
+   �������������Ʋ�ʵ��ѧ���ɼ�����ϵͳ������ͳ�Ƶ��Ƴɼ�����Ȩ�ּ��㡢�꼶�����ȡ�
+    ��Ʒ�ɢ���ܿ���Ϊ�ӷ��
  */
+#include "bits/stdc++.h"
 #include "Profile.h"
 #include "Subject.h"
 
+using namespace std;
 
-int main(){
-    Subject a;
+int main() {
+
 
 
     return 0;

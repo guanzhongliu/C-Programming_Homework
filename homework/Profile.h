@@ -12,6 +12,8 @@ class Profile {
 private:
     std::vector<Subject> common;
     std::vector<Subject> elective;
+    double overall_GPA;
+    double overall_grade;
 public:
     std::string name;
     std::string id;

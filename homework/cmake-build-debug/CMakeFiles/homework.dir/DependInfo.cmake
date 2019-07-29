@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/GradeSystem.cpp.obj"
+  "C:/Users/Roger Liu/Desktop/Programming-practice/homework/Method.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/Method.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/Profile.cpp.obj"
+  "C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticalScore.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/StacticalScore.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/Subject.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/main.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/main.cpp.obj"
   )
