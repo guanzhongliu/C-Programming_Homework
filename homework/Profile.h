@@ -12,20 +12,23 @@ class Profile {
 private:
     std::vector<Subject> common;
     std::vector<Subject> elective;
-    double overall_GPA;
-    double overall_grade;
-    int overall_rank;
+    double overall_GPA = 0;
+    double overall_grade = 0;
+    double overall_credit = 0;
+    int overall_rank = 0;
 public:
     int num_elec = 0;
     int num_com = 0;
     std::string name;
     std::string id;
 
+    Profile();
+
     Profile(std::string n, std::string id);
 
-    void addCommonSubject(Subject sub);
+    void addCommonSubject(const Subject &sub);
 
-    void addElectiveSubject(Subject sub);
+    void addElectiveSubject(const Subject &sub);
 
     void addCommonSubjects(std::vector<Subject> &cs);
 
@@ -34,6 +37,28 @@ public:
     void getCommonSubjects(std::vector<Subject> &cs);
 
     void getElectiveSubjects(std::vector<Subject> &es);
+
+    void setGPA(double G);
+
+    void setGrade(double g);
+
+    void setCredit(double c);
+
+    void setRank(int n);
+
+    double getGPA();
+
+    double getGrade();
+
+    double getCredit();
+
+    double getRank();
+
+    void getAll(double &G, double &g, double &c, int &r);
+
+    void setAll(double G, double g, double c, int r = 0);
+
+
 };
 
 

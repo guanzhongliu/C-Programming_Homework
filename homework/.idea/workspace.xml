@@ -11,17 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="部分UI(误）">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/scores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StacticalScore.h" beforeDir="false" afterPath="$PROJECT_DIR$/StacticalScore.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Subject.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -118,7 +114,9 @@
       <workItem from="1564378568856" duration="51000" />
       <workItem from="1564381039966" duration="622000" />
       <workItem from="1564383889005" duration="11972000" />
-      <workItem from="1564536192809" duration="7198000" />
+      <workItem from="1564536192809" duration="7680000" />
+      <workItem from="1564546435328" duration="189000" />
+      <workItem from="1564568734838" duration="6950000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
@@ -148,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564402453421</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="成绩读入存在小bug">
+      <created>1564545350281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564545350282</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +178,7 @@
     <MESSAGE value="成绩管理基本类完成" />
     <MESSAGE value="mid" />
     <MESSAGE value="部分UI(误）" />
-    <option name="LAST_COMMIT_MESSAGE" value="部分UI(误）" />
+    <MESSAGE value="成绩读入存在小bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="成绩读入存在小bug" />
   </component>
 </project>

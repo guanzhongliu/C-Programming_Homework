@@ -9,7 +9,28 @@
 // 因为部分参数为private，故使用初始化列表
 Subject::Subject(std::string n, double c, int g, double G, int dir) : name(n), credit(c), grade(g), GPA(G), dir(dir) {}
 
-Subject::Subject(std::string n, double c, int g, int dir) : name(n), credit(c), grade(g), dir(dir) {}
+Subject::Subject(std::string n, double c, int g, int dir) : name(n), credit(c), grade(g), dir(dir) {
+    if (g >= 90)
+        GPA = 4.0;
+    else if (g >= 85)
+        GPA = 3.7;
+    else if (g >= 82)
+        GPA = 3.3;
+    else if (g >= 78)
+        GPA = 3.0;
+    else if (g >= 75)
+        GPA = 2.7;
+    else if (g >= 72)
+        GPA = 2.3;
+    else if (g >= 68)
+        GPA = 2.0;
+    else if (g >= 64)
+        GPA = 1.5;
+    else if (g >= 60)
+        GPA = 1.0;
+    else
+        GPA = 0;        //依照绩点计算规则
+}
 
 void Subject::setName(std::string n) {
     name = n;
@@ -53,10 +74,10 @@ void Subject::setSubject(std::string n, double c, int g, int dir) {
     else if (g >= 72)
         GPA = 2.3;
     else if (g >= 68)
-        GPA = 2, 0;
+        GPA = 2.0;
     else if (g >= 64)
         GPA = 1.5;
-    else if (g >= 63)
+    else if (g >= 60)
         GPA = 1.0;
     else
         GPA = 0;        //依照绩点计算规则
