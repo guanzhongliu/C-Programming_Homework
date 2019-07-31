@@ -16,13 +16,24 @@ private:
     double overall_grade;
     int overall_rank;
 public:
+    int num_elec = 0;
+    int num_com = 0;
     std::string name;
     std::string id;
+
     Profile(std::string n, std::string id);
-    void addCommonSubjects(Subject sub);
-    void addElectiveSubjects(Subject sub);
-    void getCommonSubjects(std::vector<Subject>& cs);
-    void getElectiveSubjects(std::vector<Subject>& es);
+
+    void addCommonSubject(Subject sub);
+
+    void addElectiveSubject(Subject sub);
+
+    void addCommonSubjects(std::vector<Subject> &cs);
+
+    void addElectiveSubjects(std::vector<Subject> &es);
+
+    void getCommonSubjects(std::vector<Subject> &cs);
+
+    void getElectiveSubjects(std::vector<Subject> &es);
 };
 
 

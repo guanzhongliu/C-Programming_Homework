@@ -8,9 +8,6 @@ CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../Profile.h
 CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../StacticalScore.h
 CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../Subject.h
 
-CMakeFiles/homework.dir/Method.cpp.obj: ../Method.cpp
-CMakeFiles/homework.dir/Method.cpp.obj: ../Method.h
-
 CMakeFiles/homework.dir/Profile.cpp.obj: ../Profile.cpp
 CMakeFiles/homework.dir/Profile.cpp.obj: ../Profile.h
 CMakeFiles/homework.dir/Profile.cpp.obj: ../Subject.h

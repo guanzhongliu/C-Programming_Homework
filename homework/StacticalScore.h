@@ -7,10 +7,11 @@
 #include <string>
 
 class StacticalScore {
-private:
+public:
     std::string name;
     double GPA;
     double grade;
+    int studentNum;
 };
 
 

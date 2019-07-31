@@ -9,11 +9,11 @@ Profile::Profile(std::string n, std::string id) {
     this->id = id;
 }
 
-void Profile::addCommonSubjects(Subject sub) {
+void Profile::addCommonSubject(Subject sub) {
     common.push_back(sub);
 }
 
-void Profile::addElectiveSubjects(Subject sub) {
+void Profile::addElectiveSubject(Subject sub) {
     elective.push_back(sub);
 }
 
@@ -27,5 +27,13 @@ void Profile::getElectiveSubjects(std::vector<Subject> &es) {
     for (int i = 0; i < elective.size(); i++) {
         es.push_back(elective[i]);
     }
+}
+
+void Profile::addCommonSubjects(std::vector<Subject> &cs) {
+
+}
+
+void Profile::addElectiveSubjects(std::vector<Subject> &es) {
+
 }
 
