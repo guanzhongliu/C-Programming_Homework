@@ -23,8 +23,6 @@ public:
 
     virtual void addInformationByTap() = 0;
 
-    virtual void accountScore(std::string name) = 0;
-
     virtual void addScore(std::string name, double GPA, int grade, double credit, int dir) = 0;
 
     virtual void searchStudent() = 0;

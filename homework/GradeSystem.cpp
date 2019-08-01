@@ -6,9 +6,21 @@
 #include <io.h>
 #include "GradeSystem.h"
 #include "iostream"
-#include "fstream"
 #include "iomanip"
 
+
+int compareGrade(Profile a, Profile b) {
+    if (a.getGrade() == b.getGrade())
+        return a.getGPA() > b.getGPA();
+    return a.getGrade() > b.getGrade();
+}
+
+struct GradeBean {
+    std::string name;
+    int grade;
+
+    inline GradeBean(std::string n, int g) : name(n), grade(g) {}
+};
 
 void GradeSystem::introduction() {
     std::cout << "***************************************************************************" << std::endl;
@@ -227,10 +239,6 @@ void GradeSystem::addInformationByTap() {
     exit2Menu();
 }
 
-void GradeSystem::accountScore(std::string name) {
-
-}
-
 void GradeSystem::addStudent() {
     std::cout << "***************************************************************************" << std::endl;
     std::cout << "〓〓〓〓〓〓〓〓〓〓  ☆          学生信息录入          ☆  〓〓〓〓〓〓〓〓〓〓" << std::endl;
@@ -309,8 +317,8 @@ void GradeSystem::sortScores() {
     std::cout << "***************************************************************************" << std::endl;
     std::cout << "〓〓〓〓〓〓〓〓〓〓  ☆          学科成绩查询          ☆  〓〓〓〓〓〓〓〓〓〓" << std::endl;
     std::cout << "〓〓〓〓〓〓〓★★★★★         ★★★★★★★         ★★★★★〓〓〓〓〓〓〓" << std::endl;
-    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.查询科目成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
-    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         2.查询学生排名         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.查询学生排名         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         2.查询科目成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
     std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         0.返回                ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
     char move;
     while (std::cin >> move) {
@@ -319,10 +327,10 @@ void GradeSystem::sortScores() {
                 introduction();
                 return;
             case 1:
-                subjectInfo();
+                studentRank();
                 return;
             case 2:
-                studentRank();
+                subjectInfo();
                 return;
             default:
                 std::cout << " 您输入的指令不存在！" << std::endl;
@@ -334,16 +342,32 @@ void GradeSystem::sortScores() {
 }
 
 void GradeSystem::studentRank() {
-    std::cout << "请输入希望查看排名的科目名称(如想查询总排名请输入\"总成绩\"）： " << std::endl;
-    std::string name;
-    std::cin >> name;
-    StacticScore a;
-    if (name == "总成绩") {
+    if (students.empty()) {
+        std::cout << "数据为空！请先录入学生信息" << std::endl;
         exit2Menu();
         return;
     }
-    int i;
-
+    std::cout << "请输入希望查看排名的科目名称(如想查询总排名请输入\"总成绩\", 按照加权排名）： " << std::endl;
+    std::string name;
+    std::cin >> name;
+    if (name == "总成绩") {
+        std::vector<Profile> a = students;
+        sort(a.begin(), a.end(), compareGrade);
+        std::cout << "姓名    " << "学号    " << "加权    " << "绩点" << std::endl;
+        for (int i = 0; i < a.size(); i++) {
+            std::cout << i + 1 << ". " << a[i].name << "  " << a[i].id << "  " << a[i].getGrade() << "  "
+                      << a[i].getGPA() << std::endl;
+        }
+        exit2Menu();
+        return;
+    }
+    int i, dir;
+    for (i = 0; i < scores.size(); i++) {
+        if (scores[i].name == name) {
+            dir = scores[i].dir;
+            break;
+        }
+    }
     if (i == scores.size()) {
         std::cout << "该科目不存在！" << std::endl;
         std::cout << "输入任意字符返回..." << std::endl;
@@ -353,10 +377,21 @@ void GradeSystem::studentRank() {
         return;
     }
 
+    if (dir == 1) {
+        //TODO
+    } else {
+        //TODO
+    }
+
     exit2Menu();
 }
 
 void GradeSystem::subjectInfo() {
+    if (students.empty()) {
+        std::cout << "数据为空！请先录入学生信息" << std::endl;
+        exit2Menu();
+        return;
+    }
     std::cout << "请输入想要查询的科目名称(如想查询总览请输入\"总成绩\"）： " << std::endl;
     std::string name;
     std::cin >> name;

@@ -26,8 +26,6 @@ public:
 
     void addInformationByTap() override;
 
-    void accountScore(std::string name) override;
-
     void addScore(std::string name, double GPA, int grade, double credit, int dir) override;
 
     void addStudent() override;
