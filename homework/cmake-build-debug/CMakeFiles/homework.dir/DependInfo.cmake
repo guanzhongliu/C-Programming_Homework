@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/GradeSystem.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/Profile.cpp.obj"
-  "C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticalScore.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/StacticalScore.cpp.obj"
+  "C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticScore.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/StacticScore.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/Subject.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/main.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/main.cpp.obj"
   )

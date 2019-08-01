@@ -25,6 +25,8 @@ int main() {
             case 2:
                 gradeSystem.searchStudent();
                 break;
+            case 3:
+                gradeSystem.sortScores();
             default:
                 cout << "不存在此操作!" << endl;
                 std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.增加学生成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;

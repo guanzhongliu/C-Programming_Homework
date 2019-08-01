@@ -12,14 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/StacticScore.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StacticScore.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GradeSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Method.h" beforeDir="false" afterPath="$PROJECT_DIR$/Method.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Subject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StacticalScore.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StacticalScore.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/scores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +127,7 @@
       <workItem from="1564383889005" duration="11972000" />
       <workItem from="1564536192809" duration="7680000" />
       <workItem from="1564546435328" duration="189000" />
-      <workItem from="1564568734838" duration="6950000" />
+      <workItem from="1564568734838" duration="13931000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
@@ -153,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564545350282</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="成绩读入查询完成">
+      <created>1564575751964</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564575751964</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +197,7 @@
     <MESSAGE value="mid" />
     <MESSAGE value="部分UI(误）" />
     <MESSAGE value="成绩读入存在小bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="成绩读入存在小bug" />
+    <MESSAGE value="成绩读入查询完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="成绩读入查询完成" />
   </component>
 </project>

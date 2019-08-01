@@ -30,7 +30,6 @@ void Profile::getCommonSubjects(std::vector<Subject> &cs) {
 void Profile::getElectiveSubjects(std::vector<Subject> &es) {
     for (int i = 0; i < elective.size(); i++) {
         es.push_back(elective[i]);
-        std::cout << elective[i].name << std::endl;
     }
 
 }

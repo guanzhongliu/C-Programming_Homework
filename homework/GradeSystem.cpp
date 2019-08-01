@@ -23,6 +23,7 @@ void GradeSystem::introduction() {
     std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         0.安全退出系统         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
 }
 
+// 通过学生学号查询
 void GradeSystem::searchById() {
     Profile s;
     std::cout << "请输入需要查询的学生的学号：" << std::endl;
@@ -47,7 +48,7 @@ void GradeSystem::searchById() {
         introduction();
         return;
     }
-    std::cout << "科目     学分     成绩     绩点     课程类型" << std::endl;
+    std::cout << "科目    学分    成绩    绩点    课程类型" << std::endl;
     for (int j = 0; j < all.size(); j++) {
         Subject subject = all[j];
         std::cout << subject.name << "  " << subject.getCredit() << "  " << subject.getGrade() << "  "
@@ -65,13 +66,51 @@ void GradeSystem::searchById() {
     introduction();
 }
 
+// 通过学生姓名查询
 void GradeSystem::searchByName() {
-
+    Profile s;
+    std::cout << "请输入需要查询的学生的姓名：" << std::endl;
+    std::string name;
+    std::cin >> name;
+    int i;
+    for (i = 0; i < students.size(); i++) {
+        if (students[i].name == name) {             // 因为可能存在同名情况，所以找到便输出
+            std::vector<Subject> all;
+            std::cout << "学生姓名： " << students[i].name << " 学号： " << students[i].id << std::endl;
+            s = students[i];
+            students[i].getCommonSubjects(all);
+            students[i].getElectiveSubjects(all);
+            std::cout << "科目    学分    成绩    绩点    课程类型" << std::endl;
+            for (int j = 0; j < all.size(); j++) {
+                Subject subject = all[j];
+                std::cout << subject.name << "  " << subject.getCredit() << "  " << subject.getGrade() << "  "
+                          << subject.getGPA() << "  ";
+                if (subject.dir == 1)
+                    std::cout << "必修" << std::endl;
+                else
+                    std::cout << "选修" << std::endl;
+            }
+            std::cout << std::setprecision(4) << "平均GPA：" << s.getGPA();
+            std::cout << " 平均加权：" << s.getGrade() << "  总学分数：" << s.getCredit() << std::endl << std::endl;
+        }           //  获取学生成绩信息
+    }
+    if (i == students.size() && students[i - 1].name != name) {
+        std::cout << "该生不存在！" << std::endl;
+        std::cout << "输入任意字符返回..." << std::endl;
+        std::string move;
+        std::cin >> move;
+        introduction();
+        return;
+    }
+    std::cout << "输入任意字符返回..." << std::endl;
+    std::string move;
+    std::cin >> move;
+    introduction();
 }
 
 void GradeSystem::addInformationByFile() {
     char buff[1000];
-    _getcwd(buff, 1000);
+    _getcwd(buff, 1000);        // 获取当前生成的exe程序的绝对路径
     std::cout << "请在当前提示的目录内建立一个名为\"scores.txt\" 的文本文档(建议使用GBK编码，UTF-8可能会导致出现乱码)，并按照指定格式输入成绩" << std::endl;
     std::cout << "输入要求: 第一行为输入的学生数量, 从第二行开始为每位学生的姓名、学号和科目数量n" << std::endl;
     std::cout << buff << std::endl;
@@ -79,7 +118,7 @@ void GradeSystem::addInformationByFile() {
     std::cout << "文档编辑完毕后输入任意字符开始录入" << std::endl;
     std::string move;
     std::cin >> move;
-    strcat(buff, "\\scores.txt");// 在当前路径后添加子路径
+    strcat(buff, "\\scores.txt");   // 在当前路径后添加子路径
     std::ifstream in;
     in.open(buff, std::ios::in);
     int t;
@@ -107,6 +146,8 @@ void GradeSystem::addInformationByFile() {
                 return;
             }
             Subject subject(sub, credit, grade, dir);
+            addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
+
             double c, g, G, sum_g, sum_G;
             int r;
             students.back().getAll(G, g, c, r);
@@ -115,7 +156,8 @@ void GradeSystem::addInformationByFile() {
             c += credit;
             g = (sum_g + grade * credit) / c;
             G = (sum_G + subject.getGPA() * credit) / c;
-            students.back().setAll(G, g, c, r);
+            students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
+
             if (subject.dir == 1) {
                 a.addCommonSubject(subject);
                 a.num_com++;
@@ -174,6 +216,8 @@ void GradeSystem::addInformationByTap() {
         if (sub == "0" && grade == 0 && credit == 0 && dir == 0)
             break;
         Subject subject(sub, credit, grade, dir);
+        addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
+
         double c, g, G, sum_g, sum_G;
         int r;
         students.back().getAll(G, g, c, r);
@@ -182,7 +226,8 @@ void GradeSystem::addInformationByTap() {
         c += credit;
         g = (sum_g + grade * credit) / c;
         G = (sum_G + subject.getGPA() * credit) / c;
-        students.back().setAll(G, g, c, r);
+        students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
+
         if (subject.dir == 1) {
             students.back().addCommonSubject(subject);
             students.back().num_com++;
@@ -257,3 +302,26 @@ void GradeSystem::searchStudent() {
         }
     }
 }
+
+void GradeSystem::addScore(std::string name, double GPA, int grade, double credit, int dir) {
+    int i = 0;
+    for (i = 0; i < scores.size(); i++) {
+        if (scores[i].name == name) {
+            StacticScore &a = scores[i];
+            double total_G = GPA * a.studentNum, total_g = grade * a.studentNum;
+            a.studentNum++;
+            a.GPA = (total_G + GPA) / a.studentNum;
+            a.grade = (total_g + grade) / a.studentNum;
+            return;
+        }
+    }
+    if (i == scores.size()) {    // 此科目为新科目
+        scores.push_back(StacticScore(name, GPA, grade, credit, dir));
+    }
+}
+
+void GradeSystem::sortScores() {
+
+}
+
+

@@ -9,12 +9,12 @@
 #include "vector"
 #include "Method.h"
 #include "Profile.h"
-#include "StacticalScore.h"
+#include "StacticScore.h"
 
 class GradeSystem : Method {
 private:
     std::vector<Profile> students;
-    std::vector<StacticalScore> scores;
+    std::vector<StacticScore> scores;
 public:
     void introduction() override;
 
@@ -28,9 +28,13 @@ public:
 
     void accountScore(std::string name) override;
 
+    void addScore(std::string name, double GPA, int grade, double credit, int dir) override;
+
     void addStudent() override;
 
     void searchStudent() override;
+
+    void sortScores() override;
 };
 
 
