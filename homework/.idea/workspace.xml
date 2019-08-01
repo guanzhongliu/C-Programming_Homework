@@ -12,14 +12,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GradeBean.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GradeBean.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GradeSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Method.h" beforeDir="false" afterPath="$PROJECT_DIR$/Method.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/local_save.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/local_save.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +128,7 @@
       <workItem from="1564536192809" duration="7680000" />
       <workItem from="1564546435328" duration="189000" />
       <workItem from="1564568734838" duration="15153000" />
-      <workItem from="1564632164981" duration="16694000" />
+      <workItem from="1564632164981" duration="19027000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
@@ -174,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564647243978</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="加权排名">
+      <created>1564666080054</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564666080054</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +222,7 @@
     <MESSAGE value="成绩读入查询完成" />
     <MESSAGE value="完善查询" />
     <MESSAGE value="科目详情" />
-    <option name="LAST_COMMIT_MESSAGE" value="科目详情" />
+    <MESSAGE value="加权排名" />
+    <option name="LAST_COMMIT_MESSAGE" value="加权排名" />
   </component>
 </project>

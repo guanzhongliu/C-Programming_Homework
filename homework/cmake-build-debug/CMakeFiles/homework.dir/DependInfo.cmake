@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeBean.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/GradeBean.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/GradeSystem.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/Profile.cpp.obj"
   "C:/Users/Roger Liu/Desktop/Programming-practice/homework/StacticScore.cpp" "C:/Users/Roger Liu/Desktop/Programming-practice/homework/cmake-build-debug/CMakeFiles/homework.dir/StacticScore.cpp.obj"

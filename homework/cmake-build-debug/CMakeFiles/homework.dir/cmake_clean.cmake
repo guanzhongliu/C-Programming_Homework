@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/homework.dir/Subject.cpp.obj"
   "CMakeFiles/homework.dir/GradeSystem.cpp.obj"
   "CMakeFiles/homework.dir/StacticScore.cpp.obj"
+  "CMakeFiles/homework.dir/GradeBean.cpp.obj"
   "homework.pdb"
   "homework.exe"
   "homework.exe.manifest"

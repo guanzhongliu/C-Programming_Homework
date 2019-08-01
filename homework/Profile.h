@@ -7,6 +7,7 @@
 
 #include "bits/stdc++.h"
 #include "Subject.h"
+#include "GradeBean.h"
 
 class Profile {
 private:
@@ -58,6 +59,7 @@ public:
 
     void setAll(double G, double g, double c, int r = 0);
 
+    GradeBean getSubjectDetail(std::string name, int dir);  // 获取科目信息
 
 };
 

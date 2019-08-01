@@ -92,5 +92,22 @@ void Profile::setAll(double G, double g, double c, int r) {
     overall_rank = r;
 }
 
+GradeBean Profile::getSubjectDetail(std::string name, int dir) {
+    if (dir == 1) {
+        for (int i = 0; i < common.size(); i++) {
+            if (common[i].name == name) {
+                return GradeBean(this->name, this->id, common[i].getGrade(), common[i].getGPA());
+            }
+        }
+    } else {
+        for (int i = 0; i < elective.size(); i++) {
+            if (elective[i].name == name) {
+                return GradeBean(this->name, this->id, elective[i].getGrade(), elective[i].getGPA());
+            }
+        }
+    }
+
+    return GradeBean("", "", 0, 0);
+}
 
 

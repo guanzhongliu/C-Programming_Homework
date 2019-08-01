@@ -15,12 +15,11 @@ int compareGrade(Profile a, Profile b) {
     return a.getGrade() > b.getGrade();
 }
 
-struct GradeBean {
-    std::string name;
-    int grade;
-
-    inline GradeBean(std::string n, int g) : name(n), grade(g) {}
-};
+int compareGrade2(GradeBean a, GradeBean b) {
+    if (a.grade == b.grade)
+        return a.id > b.id;
+    return a.grade > b.grade;
+}
 
 void GradeSystem::introduction() {
     std::cout << "***************************************************************************" << std::endl;
@@ -361,7 +360,7 @@ void GradeSystem::studentRank() {
         exit2Menu();
         return;
     }
-    int i, dir;
+    int i, dir = 0;
     for (i = 0; i < scores.size(); i++) {
         if (scores[i].name == name) {
             dir = scores[i].dir;
@@ -376,11 +375,18 @@ void GradeSystem::studentRank() {
         sortScores();
         return;
     }
+    std::vector<GradeBean> a;
+    for (int j = 0; j < students.size(); j++) {
+        GradeBean m = students[j].getSubjectDetail(name, dir);
+        if (m.name != "")
+            a.push_back(m);
+    }           // 寻找所有拥有此课程的学生，并记录课程信息
 
-    if (dir == 1) {
-        //TODO
-    } else {
-        //TODO
+    sort(a.begin(), a.end(), compareGrade2);  // 排序
+    std::cout << "姓名    " << "学号    " << "加权    " << "绩点" << std::endl;
+    for (int i = 0; i < a.size(); i++) {
+        std::cout << i + 1 << ". " << a[i].name << "  " << a[i].id << "  " << a[i].grade << "  "
+                  << a[i].GPA << std::endl;
     }
 
     exit2Menu();

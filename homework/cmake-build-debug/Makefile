@@ -122,6 +122,33 @@ homework/fast:
 	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/build
 .PHONY : homework/fast
 
+GradeBean.obj: GradeBean.cpp.obj
+
+.PHONY : GradeBean.obj
+
+# target to build an object file
+GradeBean.cpp.obj:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeBean.cpp.obj
+.PHONY : GradeBean.cpp.obj
+
+GradeBean.i: GradeBean.cpp.i
+
+.PHONY : GradeBean.i
+
+# target to preprocess a source file
+GradeBean.cpp.i:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeBean.cpp.i
+.PHONY : GradeBean.cpp.i
+
+GradeBean.s: GradeBean.cpp.s
+
+.PHONY : GradeBean.s
+
+# target to generate assembly for a file
+GradeBean.cpp.s:
+	$(MAKE) -f CMakeFiles\homework.dir\build.make CMakeFiles/homework.dir/GradeBean.cpp.s
+.PHONY : GradeBean.cpp.s
+
 GradeSystem.obj: GradeSystem.cpp.obj
 
 .PHONY : GradeSystem.obj
@@ -266,6 +293,9 @@ help:
 	@echo ... homework
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... GradeBean.obj
+	@echo ... GradeBean.i
+	@echo ... GradeBean.s
 	@echo ... GradeSystem.obj
 	@echo ... GradeSystem.i
 	@echo ... GradeSystem.s

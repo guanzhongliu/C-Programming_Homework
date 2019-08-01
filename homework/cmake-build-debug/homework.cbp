@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeBean.cpp">
+			<Option target="homework"/>
+		</Unit>
+		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeBean.h">
+			<Option target="homework"/>
+		</Unit>
 		<Unit filename="C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp">
 			<Option target="homework"/>
 		</Unit>
