@@ -12,3 +12,7 @@ StacticScore::StacticScore(std::string name, double GPA, double grade, double cr
     this->dir = dir;
     studentNum = 1;
 }
+
+StacticScore::StacticScore() {
+
+}

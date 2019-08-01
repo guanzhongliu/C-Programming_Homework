@@ -12,9 +12,13 @@
 using namespace std;
 
 int main() {
-    char move;  // 增强健壮性
+    char move;  // 增强代码健壮性
     GradeSystem gradeSystem;     // 实例化一个成绩管理系统
-    gradeSystem.introduction();
+
+    gradeSystem.readFromLocal(); // 从本地加载保存的数据
+
+    gradeSystem.introduction();   // 系统功能菜单
+
     while (cin >> move) {
         switch (move - '0') {
             case 0:
@@ -27,6 +31,9 @@ int main() {
                 break;
             case 3:
                 gradeSystem.sortScores();
+                break;
+            case 4:
+                break;
             default:
                 cout << "不存在此操作!" << endl;
                 std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.增加学生成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;

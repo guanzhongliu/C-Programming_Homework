@@ -107,5 +107,9 @@ int Subject::getRank() {
     return rank;
 }
 
+Subject::Subject() {
+
+}
+
 
 

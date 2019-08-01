@@ -35,6 +35,14 @@ public:
     void searchStudent() override;
 
     void sortScores() override;
+
+    void studentRank() override;
+
+    void subjectInfo() override;
+
+    void exit2Menu() override;
+
+    void readFromLocal() override;
 };
 
 

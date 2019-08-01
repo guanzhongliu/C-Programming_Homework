@@ -5,15 +5,15 @@ CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../GradeSystem.cpp
 CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../GradeSystem.h
 CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../Method.h
 CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../Profile.h
-CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../StacticalScore.h
+CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../StacticScore.h
 CMakeFiles/homework.dir/GradeSystem.cpp.obj: ../Subject.h
 
 CMakeFiles/homework.dir/Profile.cpp.obj: ../Profile.cpp
 CMakeFiles/homework.dir/Profile.cpp.obj: ../Profile.h
 CMakeFiles/homework.dir/Profile.cpp.obj: ../Subject.h
 
-CMakeFiles/homework.dir/StacticalScore.cpp.obj: ../StacticalScore.cpp
-CMakeFiles/homework.dir/StacticalScore.cpp.obj: ../StacticalScore.h
+CMakeFiles/homework.dir/StacticScore.cpp.obj: ../StacticScore.cpp
+CMakeFiles/homework.dir/StacticScore.cpp.obj: ../StacticScore.h
 
 CMakeFiles/homework.dir/Subject.cpp.obj: ../Subject.cpp
 CMakeFiles/homework.dir/Subject.cpp.obj: ../Subject.h
@@ -21,7 +21,7 @@ CMakeFiles/homework.dir/Subject.cpp.obj: ../Subject.h
 CMakeFiles/homework.dir/main.cpp.obj: ../GradeSystem.h
 CMakeFiles/homework.dir/main.cpp.obj: ../Method.h
 CMakeFiles/homework.dir/main.cpp.obj: ../Profile.h
-CMakeFiles/homework.dir/main.cpp.obj: ../StacticalScore.h
+CMakeFiles/homework.dir/main.cpp.obj: ../StacticScore.h
 CMakeFiles/homework.dir/main.cpp.obj: ../Subject.h
 CMakeFiles/homework.dir/main.cpp.obj: ../main.cpp
 

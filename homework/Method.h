@@ -30,6 +30,14 @@ public:
     virtual void searchStudent() = 0;
 
     virtual void sortScores() = 0;
+
+    virtual void subjectInfo() = 0;
+
+    virtual void studentRank() = 0;
+
+    virtual void exit2Menu() = 0;
+
+    virtual void readFromLocal() = 0;
 };
 
 

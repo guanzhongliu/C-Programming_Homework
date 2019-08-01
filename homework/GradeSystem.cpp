@@ -42,13 +42,10 @@ void GradeSystem::searchById() {
     }
     if (i == students.size()) {
         std::cout << "该生不存在！" << std::endl;
-        std::cout << "输入任意字符返回..." << std::endl;
-        std::string move;
-        std::cin >> move;
-        introduction();
+        exit2Menu();
         return;
     }
-    std::cout << "科目    学分    成绩    绩点    课程类型" << std::endl;
+    std::cout << "科目     学分     成绩     绩点     课程类型" << std::endl;
     for (int j = 0; j < all.size(); j++) {
         Subject subject = all[j];
         std::cout << subject.name << "  " << subject.getCredit() << "  " << subject.getGrade() << "  "
@@ -59,11 +56,8 @@ void GradeSystem::searchById() {
             std::cout << "选修" << std::endl;
     }
     std::cout << std::setprecision(4) << "平均GPA：" << s.getGPA();
-    std::cout << " 平均加权：" << s.getGrade() << "  总学分数：" << s.getCredit() << std::endl;
-    std::cout << "输入任意字符返回..." << std::endl;
-    std::string move;
-    std::cin >> move;
-    introduction();
+    std::cout << "  平均加权：" << s.getGrade() << "    总学分数：" << s.getCredit() << std::endl;
+    exit2Menu();
 }
 
 // 通过学生姓名查询
@@ -80,32 +74,26 @@ void GradeSystem::searchByName() {
             s = students[i];
             students[i].getCommonSubjects(all);
             students[i].getElectiveSubjects(all);
-            std::cout << "科目    学分    成绩    绩点    课程类型" << std::endl;
+            std::cout << "科目     学分     成绩     绩点     课程类型" << std::endl;
             for (int j = 0; j < all.size(); j++) {
                 Subject subject = all[j];
-                std::cout << subject.name << "  " << subject.getCredit() << "  " << subject.getGrade() << "  "
-                          << subject.getGPA() << "  ";
+                std::cout << subject.name << "   " << subject.getCredit() << "   " << subject.getGrade() << "  "
+                          << subject.getGPA() << "   ";
                 if (subject.dir == 1)
                     std::cout << "必修" << std::endl;
                 else
                     std::cout << "选修" << std::endl;
             }
             std::cout << std::setprecision(4) << "平均GPA：" << s.getGPA();
-            std::cout << " 平均加权：" << s.getGrade() << "  总学分数：" << s.getCredit() << std::endl << std::endl;
+            std::cout << "   平均加权：" << s.getGrade() << "    总学分数：" << s.getCredit() << std::endl << std::endl;
         }           //  获取学生成绩信息
     }
     if (i == students.size() && students[i - 1].name != name) {
         std::cout << "该生不存在！" << std::endl;
-        std::cout << "输入任意字符返回..." << std::endl;
-        std::string move;
-        std::cin >> move;
-        introduction();
+        exit2Menu();
         return;
     }
-    std::cout << "输入任意字符返回..." << std::endl;
-    std::string move;
-    std::cin >> move;
-    introduction();
+    exit2Menu();
 }
 
 void GradeSystem::addInformationByFile() {
@@ -170,10 +158,7 @@ void GradeSystem::addInformationByFile() {
                   << std::endl;
     }
     in.close();
-    std::cout << "输入任意字符返回..." << std::endl;
-    std::string mo;
-    std::cin >> mo;
-    introduction();
+    exit2Menu();
 }
 
 void GradeSystem::addInformationByTap() {
@@ -188,6 +173,7 @@ void GradeSystem::addInformationByTap() {
     std::cin >> flag;
     switch (flag - '0') {
         case 0:
+            introduction();
             return;
         case 1:
             break;
@@ -238,10 +224,7 @@ void GradeSystem::addInformationByTap() {
     }
     Profile a = students.back();
     std::cout << "您本次为学生 " << a.name << " 登记了 " << a.num_com << " 门必修课成绩和 " << a.num_elec << " 门选修课成绩" << std::endl;
-    std::cout << "输入任意字符返回..." << std::endl;
-    std::string move;
-    std::cin >> move;
-    introduction();
+    exit2Menu();
 }
 
 void GradeSystem::accountScore(std::string name) {
@@ -259,6 +242,7 @@ void GradeSystem::addStudent() {
     while (std::cin >> move) {
         switch (move - '0') {
             case 0:
+                introduction();
                 return;
             case 1:
                 addInformationByTap();
@@ -287,6 +271,7 @@ void GradeSystem::searchStudent() {
     while (std::cin >> move) {
         switch (move - '0') {
             case 0:
+                introduction();
                 return;
             case 1:
                 searchByName();
@@ -308,11 +293,11 @@ void GradeSystem::addScore(std::string name, double GPA, int grade, double credi
     for (i = 0; i < scores.size(); i++) {
         if (scores[i].name == name) {
             StacticScore &a = scores[i];
-            double total_G = GPA * a.studentNum, total_g = grade * a.studentNum;
+            double total_G = a.GPA * a.studentNum, total_g = a.grade * a.studentNum;
             a.studentNum++;
             a.GPA = (total_G + GPA) / a.studentNum;
             a.grade = (total_g + grade) / a.studentNum;
-            return;
+            break;
         }
     }
     if (i == scores.size()) {    // 此科目为新科目
@@ -321,7 +306,163 @@ void GradeSystem::addScore(std::string name, double GPA, int grade, double credi
 }
 
 void GradeSystem::sortScores() {
+    std::cout << "***************************************************************************" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓〓〓〓  ☆          学科成绩查询          ☆  〓〓〓〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓★★★★★         ★★★★★★★         ★★★★★〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.查询科目成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         2.查询学生排名         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         0.返回                ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+    char move;
+    while (std::cin >> move) {
+        switch (move - '0') {
+            case 0:
+                introduction();
+                return;
+            case 1:
+                subjectInfo();
+                return;
+            case 2:
+                studentRank();
+                return;
+            default:
+                std::cout << " 您输入的指令不存在！" << std::endl;
+                std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.查询科目成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+                std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         2.查询科目排名         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+                std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         0.返回                ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+        }
+    }
+}
 
+void GradeSystem::studentRank() {
+    std::cout << "请输入希望查看排名的科目名称(如想查询总排名请输入\"总成绩\"）： " << std::endl;
+    std::string name;
+    std::cin >> name;
+    StacticScore a;
+    if (name == "总成绩") {
+        exit2Menu();
+        return;
+    }
+    int i;
+
+    if (i == scores.size()) {
+        std::cout << "该科目不存在！" << std::endl;
+        std::cout << "输入任意字符返回..." << std::endl;
+        std::string move;
+        std::cin >> move;
+        sortScores();
+        return;
+    }
+
+    exit2Menu();
+}
+
+void GradeSystem::subjectInfo() {
+    std::cout << "请输入想要查询的科目名称(如想查询总览请输入\"总成绩\"）： " << std::endl;
+    std::string name;
+    std::cin >> name;
+    StacticScore a;
+    if (name == "总成绩") {
+        std::vector<Subject> sub;
+        double GPA = 0, grade = 0, credit = 0;
+        for (int i = 0; i < scores.size(); i++) {
+            a = scores[i];
+            credit += a.credit;
+            GPA += a.GPA * a.credit;
+            grade += a.grade * a.credit;
+            std::string type = (a.dir) ? "必修" : "选修";
+            std::cout << "科目名称： " << a.name << "    科目学分： " << a.credit << "    科目类型： " << type << std::endl;
+            std::cout << "年级平均GPA： " << a.GPA << "      年级平均成绩： " << a.grade << std::endl;
+        }
+        std::cout << std::endl << "年级平均总GPA： " << GPA / credit << "      年级平均总成绩： " << grade / credit << std::endl;
+        exit2Menu();
+        return;
+    }
+    int i;
+    for (i = 0; i < scores.size(); i++) {
+        if (scores[i].name == name) {
+            a = scores[i];
+            break;
+        }           //  获取科目成绩信息
+    }
+    if (i == scores.size()) {
+        std::cout << "该科目不存在！" << std::endl;
+        std::cout << "输入任意字符返回..." << std::endl;
+        std::string move;
+        std::cin >> move;
+        sortScores();
+        return;
+    }
+    std::string type = (a.dir) ? "必修" : "选修";
+    std::cout << "科目名称： " << a.name << "    科目学分： " << a.credit << "    科目类型： " << type << std::endl;
+    std::cout << "年级平均GPA： " << a.GPA << "      年级平均成绩： " << a.grade << std::endl;
+    std::cout << "————具体学生信息————" << std::endl;
+    for (int i = 0; i < students.size(); i++) {
+        std::vector<Subject> sub;
+        if (a.dir == 1)
+            students[i].getCommonSubjects(sub);
+        else
+            students[i].getElectiveSubjects(sub);
+        for (int j = 0; j < sub.size(); j++) {
+            if (sub[j].name == a.name) {
+                std::cout << "学生姓名： " << students[i].name << " 学号： " << students[i].id << std::endl;
+                std::cout << "绩点： " << sub[j].getGPA() << "" << "     成绩：" << sub[j].getGrade() << std::endl
+                          << std::endl;
+                break;
+            }
+        }
+    }
+    exit2Menu();
+}
+
+void GradeSystem::exit2Menu() {
+    std::cout << "输入任意字符返回..." << std::endl;
+    std::string move;
+    std::cin >> move;
+    introduction();
+}
+
+void GradeSystem::readFromLocal() {
+    char buff[1000];
+    _getcwd(buff, 1000);
+    strcat(buff, "\\local_save.txt");   // 本地保存文件
+    std::ifstream in;
+    in.open(buff, std::ios::in);
+    int t;
+    in >> t;
+    for (int j = 0; j < t; j++) {
+        std::string name, id, sub;
+        int num;
+        in >> name >> id >> num;
+        students.push_back(Profile(name, id));
+        Profile &a = students.back();
+        for (int i = 0; i < num; i++) {
+            double credit;
+            int grade, dir;
+            in >> sub >> credit >> grade >> dir;
+            Subject subject(sub, credit, grade, dir);
+            addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
+
+            double c, g, G, sum_g, sum_G;
+            int r;
+            students.back().getAll(G, g, c, r);
+            sum_g = g * c;
+            sum_G = G * c;
+            c += credit;
+            g = (sum_g + grade * credit) / c;
+            G = (sum_G + subject.getGPA() * credit) / c;
+            students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
+
+            if (subject.dir == 1) {
+                a.addCommonSubject(subject);
+                a.num_com++;
+            } else {
+                a.addElectiveSubject(subject);
+                a.num_elec++;
+            }
+        }
+    }
+    in.close();
+    std::cout << "本地数据记录加载成功..." << std::endl;
 }
 
 

@@ -13,11 +13,11 @@ Profile::Profile(std::string n, std::string id) {
     this->id = id;
 }
 
-void Profile::addCommonSubject(const Subject& sub) {
+void Profile::addCommonSubject(const Subject &sub) {
     common.push_back(sub);
 }
 
-void Profile::addElectiveSubject(const Subject& sub) {
+void Profile::addElectiveSubject(const Subject &sub) {
     elective.push_back(sub);
 }
 
