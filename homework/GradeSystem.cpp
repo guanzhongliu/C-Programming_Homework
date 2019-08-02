@@ -224,12 +224,15 @@ void GradeSystem::searchStudent() {
             case 0:
                 introduction();
                 return;
+                break;
             case 1:
                 searchByName();
                 return;
+                break;
             case 2:
                 searchById();
                 return;
+                break;
             default:
                 std::cout << " 您输入的指令不存在！" << std::endl;
                 std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         1.通过姓名查询         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
@@ -451,6 +454,85 @@ void GradeSystem::readFromLocal() {
 }
 
 void GradeSystem::deleteScores() {
+    std::cout << "请输入您想要删除成绩的学生的学号：" << std::endl;
+    std::string id;
+    std::cin >> id;
+    Profile s;
+    std::vector<Subject> all;
+    int i;
+    for (i = 0; i < students.size(); i++) {
+        if (students[i].id == id) {
+            std::cout << "学生姓名： " << students[i].name << " 学号： " << students[i].id << std::endl;
+            s = students[i];
+            students[i].getCommonSubjects(all);
+            students[i].getElectiveSubjects(all);
+            break;
+        }           //  获取学生成绩信息
+    }
+    if (i == students.size()) {
+        std::cout << "该生不存在！" << std::endl;
+        exit2Menu();
+        return;
+    }
+    std::cout << "科目     学分     成绩     绩点     课程类型" << std::endl;
+    for (int j = 0; j < all.size(); j++) {
+        Subject subject = all[j];
+        std::cout << subject.name << "  " << subject.getCredit() << "  " << subject.getGrade() << "  "
+                  << subject.getGPA() << "  ";
+        if (subject.dir == 1)
+            std::cout << "必修" << std::endl;
+        else
+            std::cout << "选修" << std::endl;
+    }
+    std::cout << std::setprecision(4) << "平均GPA：" << s.getGPA();
+    std::cout << "  平均加权：" << s.getGrade() << "    总学分数：" << s.getCredit() << std::endl << std::endl;
+    std::cout << "请输入您想要删除的科目, 输入0代表结束：" << std::endl;
+    while (1) {
+        int d, k;
+        double c;
+        if (students[i].num_elec == 0 && students[i].num_com == 0) {
+            std::cout << "不存在任何课程成绩！" << std::endl;
+            break;
+        }
+        std::string move;
+        std::cin >> move;
+        if (move == "0")
+            break;
+        for (k = 0; k < all.size(); k++) {
+            if (all[k].name == move) {
+                d = all[k].dir;
+                c = all[k].getCredit();
+                break;
+            }
+        }
+        if (k == all.size()) {
+            std::cout << "课程不存在！" << std::endl;
+            continue;
+        }
+        GradeBean gra = students[i].deleteCourse(move, d);
+        for (int v = 0; v < scores.size(); v++) {
+            if (scores[v].name == move) {
+                int grade = gra.grade;
+                double GPA = gra.GPA, t_g, t_G;
+                if (scores[v].studentNum == 1) {
+                    scores.erase(scores.begin() + v);
+                    break;
+                }
+                t_g = scores[v].grade * scores[v].studentNum;
+                t_G = scores[v].GPA * scores[v].studentNum;
+                scores[v].studentNum--;
+                scores[v].grade = (t_g - grade) / scores[v].studentNum;
+                scores[v].GPA = (t_G - GPA) / scores[v].studentNum;
+                break;
+            }
+        }
+        std::cout << "课程 " << move << " 成绩已被成功删除！" << std::endl;
+    }
+    exit2Menu();
+
+}
+
+void GradeSystem::fixScores() {
     std::cout << "请输入您想要修改成绩的学生的学号：" << std::endl;
     std::string id;
     std::cin >> id;
@@ -483,14 +565,10 @@ void GradeSystem::deleteScores() {
     }
     std::cout << std::setprecision(4) << "平均GPA：" << s.getGPA();
     std::cout << "  平均加权：" << s.getGrade() << "    总学分数：" << s.getCredit() << std::endl << std::endl;
-    std::cout << "请输入您想要删除的科目，如选择删除学生档案及全部成绩请输入\"全部\", 输入0结束：" << std::endl;
+    std::cout << "请输入您想要修改的科目, 输入0代表结束：" << std::endl;
     while (1) {
-        int d, k;
+        int d, k, value;
         double c;
-        if (students[i].num_elec == 0 && students[i].num_com == 0) {
-            std::cout << "不存在任何课程成绩！" << std::endl;
-            break;
-        }
         std::string move;
         std::cin >> move;
         if (move == "0")
@@ -499,6 +577,8 @@ void GradeSystem::deleteScores() {
             if (all[k].name == move) {
                 d = all[k].dir;
                 c = all[k].getCredit();
+                std::cout << "请输入修改后的成绩：" << std::endl;
+                std::cin >> value;
                 break;
             }
         }
@@ -506,32 +586,21 @@ void GradeSystem::deleteScores() {
             std::cout << "课程不存在！" << std::endl;
             continue;
         }
-        GradeBean gra = students[i].deleteCourse(move, d);
+        GradeBean gra = students[i].fixCourse(move, d, value);
         for (int v = 0; v < scores.size(); v++) {
             if (scores[v].name == move) {
                 int grade = gra.grade;
                 double GPA = gra.GPA, t_g, t_G;
-                if (scores[v].studentNum == 1) {
-                    scores.erase(scores.begin() + v);
-                    break;
-                }
-                scores[v].studentNum--;
-                t_g = scores[v].grade * scores[v].credit;
-                t_G = scores[v].GPA * scores[v].credit;
-                scores[v].credit -= c;
-                scores[v].grade = (t_g - grade * c) / scores[v].credit;
-                scores[v].GPA = (t_G - GPA * c) / scores[v].credit;
+                t_g = scores[v].grade * scores[v].studentNum;
+                t_G = scores[v].GPA * scores[v].studentNum;
+                scores[v].grade = (t_g - grade) / scores[v].studentNum;
+                scores[v].GPA = (t_G - GPA) / scores[v].studentNum;
                 break;
             }
         }
-        std::cout << "课程 " << move << " 成绩已被成功删除！" << std::endl;
+        std::cout << "课程 " << move << " 成绩已被成功修改为：" << value << std::endl;
     }
     exit2Menu();
-
-}
-
-void GradeSystem::fixScores() {
-
 }
 
 void GradeSystem::displayAll() {
@@ -576,9 +645,11 @@ void GradeSystem::showStudentDetailbyId(std::string id) {
 
 void GradeSystem::showStudentDetailbyName(std::string name) {
     Profile s;
+    bool flag = 0;
     int i;
     for (i = 0; i < students.size(); i++) {
-        if (students[i].name == name) {             // 因为可能存在同名情况，所以找到便输出
+        if (students[i].name == name) {// 因为可能存在同名情况，所以找到便输出
+            flag = 1;   // 标记是否有找到
             std::vector<Subject> all;
             std::cout << "学生姓名： " << students[i].name << " 学号： " << students[i].id << std::endl;
             s = students[i];
@@ -598,7 +669,7 @@ void GradeSystem::showStudentDetailbyName(std::string name) {
             std::cout << "   平均加权：" << s.getGrade() << "    总学分数：" << s.getCredit() << std::endl << std::endl;
         }           //  获取学生成绩信息
     }
-    if (i == students.size() && students[i - 1].name != name) {
+    if (!flag) {
         std::cout << "该生不存在！" << std::endl;
         exit2Menu();
         return;

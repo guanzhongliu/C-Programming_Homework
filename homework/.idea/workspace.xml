@@ -14,14 +14,11 @@
     <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GradeSystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Method.h" beforeDir="false" afterPath="$PROJECT_DIR$/Method.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Subject.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +118,7 @@
       <workItem from="1564632164981" duration="19384000" />
       <workItem from="1564718655877" duration="164000" />
       <workItem from="1564728916940" duration="614000" />
-      <workItem from="1564743913163" duration="5195000" />
+      <workItem from="1564743913163" duration="7384000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
@@ -193,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564676696638</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="学生成绩删除">
+      <created>1564749386792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564749386793</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +228,7 @@
     <MESSAGE value="科目详情" />
     <MESSAGE value="加权排名" />
     <MESSAGE value="排名系统完成~" />
-    <option name="LAST_COMMIT_MESSAGE" value="排名系统完成~" />
+    <MESSAGE value="学生成绩删除" />
+    <option name="LAST_COMMIT_MESSAGE" value="学生成绩删除" />
   </component>
 </project>

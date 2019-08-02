@@ -111,7 +111,7 @@ GradeBean Profile::getSubjectDetail(std::string name, int dir) {
 }
 
 GradeBean Profile::deleteCourse(std::string name, int dir) {
-    int i, j;
+    int i;
     if (dir == 1) {
         for (i = 0; i < common.size(); i++) {
             if (common[i].name == name) {
@@ -127,7 +127,7 @@ GradeBean Profile::deleteCourse(std::string name, int dir) {
                 return GradeBean(grade, GPA);
             }
         }
-    } else{
+    } else {
         for (i = 0; i < elective.size(); i++) {
             if (elective[i].name == name) {
                 int grade = elective[i].getGrade();
@@ -143,6 +143,42 @@ GradeBean Profile::deleteCourse(std::string name, int dir) {
             }
         }
     }
+    return GradeBean();
+}
+
+GradeBean Profile::fixCourse(std::string name, int dir, int value) {
+    int i;
+    if (dir == 1) {
+        for (i = 0; i < common.size(); i++) {
+            if (common[i].name == name) {
+                int grade = common[i].getGrade() - value;
+                double pGPA = common[i].getGPA(), credit = common[i].getCredit(), t_g, t_G;
+                common[i].setGrade(value);
+                double GPA = pGPA - common[i].getGPA();
+                t_g = overall_grade * overall_credit;
+                t_G = overall_GPA * overall_credit;
+                overall_grade = (t_g - grade * credit) / overall_credit;
+                overall_GPA = (t_G - GPA * credit) / overall_credit;
+                return GradeBean(grade, GPA);
+            }
+        }
+    } else {
+        for (i = 0; i < elective.size(); i++) {
+            if (elective[i].name == name) {
+                int grade = elective[i].getGrade() - value;
+                double pGPA = elective[i].getGPA(), credit = elective[i].getCredit(), t_g, t_G;
+                elective[i].setGrade(value);
+                double GPA = pGPA - elective[i].getGPA();
+                t_g = overall_grade * overall_credit;
+                t_G = overall_GPA * overall_credit;
+                overall_grade = (t_g - grade * credit) / overall_credit;
+                overall_GPA = (t_G - GPA * credit) / overall_credit;
+                return GradeBean(grade, GPA);
+            }
+        }
+    }
+
+
     return GradeBean();
 }
 

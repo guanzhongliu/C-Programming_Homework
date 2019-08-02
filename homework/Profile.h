@@ -59,6 +59,8 @@ public:
 
     void setAll(double G, double g, double c, int r = 0);
 
+    GradeBean fixCourse(std::string name, int dir, int value);
+
     GradeBean deleteCourse(std::string name, int dir);  // 删除时返回科目成绩和绩点，方便修改平均成绩
 
     GradeBean getSubjectDetail(std::string name, int dir);  // 获取科目信息

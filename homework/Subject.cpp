@@ -42,6 +42,26 @@ void Subject::setCredit(double c) {
 
 void Subject::setGrade(int g) {
     grade = g;
+    if (g >= 90)
+        GPA = 4.0;
+    else if (g >= 85)
+        GPA = 3.7;
+    else if (g >= 82)
+        GPA = 3.3;
+    else if (g >= 78)
+        GPA = 3.0;
+    else if (g >= 75)
+        GPA = 2.7;
+    else if (g >= 72)
+        GPA = 2.3;
+    else if (g >= 68)
+        GPA = 2.0;
+    else if (g >= 64)
+        GPA = 1.5;
+    else if (g >= 60)
+        GPA = 1.0;
+    else
+        GPA = 0;        //依照绩点计算规则
 }
 
 void Subject::setGPA(double G) {
