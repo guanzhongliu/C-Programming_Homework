@@ -41,6 +41,18 @@ public:
     void exit2Menu() override;
 
     void readFromLocal() override;
+
+    void deleteScores() override;
+
+    void fixScores() override;
+
+    void displayAll() override;
+
+    void safeExit() override;
+
+    void showStudentDetailbyId(std::string id);
+
+    void showStudentDetailbyName(std::string name);
 };
 
 

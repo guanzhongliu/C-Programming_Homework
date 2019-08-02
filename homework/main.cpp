@@ -22,7 +22,8 @@ int main() {
     while (cin >> move) {
         switch (move - '0') {
             case 0:
-                return 0;
+                gradeSystem.safeExit();
+                break;
             case 1:
                 gradeSystem.addStudent();
                 break;
@@ -33,6 +34,13 @@ int main() {
                 gradeSystem.sortScores();
                 break;
             case 4:
+                gradeSystem.deleteScores();
+                break;
+            case 5:
+                gradeSystem.fixScores();
+                break;
+            case 6:
+                gradeSystem.displayAll();
                 break;
             default:
                 cout << "不存在此操作!" << endl;

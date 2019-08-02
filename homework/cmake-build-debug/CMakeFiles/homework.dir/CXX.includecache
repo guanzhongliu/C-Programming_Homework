@@ -6,17 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeBean.cpp
-GradeBean.h
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeBean.h
-
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeBean.h
 string
 -
 
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.cpp
-libloaderapi.h
--
 io.h
 -
 GradeSystem.h
@@ -40,10 +34,6 @@ C:/Users/Roger Liu/Desktop/Programming-practice/homework/Method.h
 string
 -
 
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.cpp
-Profile.h
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h
-
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/Profile.h
 bits/stdc++.h
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/bits/stdc++.h
@@ -59,10 +49,4 @@ string
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/Subject.h
 bits/stdc++.h
 C:/Users/Roger Liu/Desktop/Programming-practice/homework/bits/stdc++.h
-
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/main.cpp
-bits/stdc++.h
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/bits/stdc++.h
-GradeSystem.h
-C:/Users/Roger Liu/Desktop/Programming-practice/homework/GradeSystem.h
 

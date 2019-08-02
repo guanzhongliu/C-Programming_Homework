@@ -110,4 +110,40 @@ GradeBean Profile::getSubjectDetail(std::string name, int dir) {
     return GradeBean("", "", 0, 0);
 }
 
+GradeBean Profile::deleteCourse(std::string name, int dir) {
+    int i, j;
+    if (dir == 1) {
+        for (i = 0; i < common.size(); i++) {
+            if (common[i].name == name) {
+                int grade = common[i].getGrade();
+                double GPA = common[i].getGPA(), credit = common[i].getCredit(), t_g, t_G;
+                common.erase(common.begin() + i);  // 删除成绩
+                num_com--;
+                t_g = overall_grade * overall_credit;
+                t_G = overall_GPA * overall_credit;
+                overall_credit -= credit;
+                overall_grade = (t_g - grade * credit) / overall_credit;
+                overall_GPA = (t_G - GPA * credit) / overall_credit;
+                return GradeBean(grade, GPA);
+            }
+        }
+    } else{
+        for (i = 0; i < elective.size(); i++) {
+            if (elective[i].name == name) {
+                int grade = elective[i].getGrade();
+                double GPA = elective[i].getGPA(), credit = elective[i].getCredit(), t_g, t_G;
+                elective.erase(elective.begin() + i);  // 删除成绩
+                num_elec--;
+                t_g = overall_grade * overall_credit;
+                t_G = overall_GPA * overall_credit;
+                overall_credit -= credit;
+                overall_grade = (t_g - grade * credit) / overall_credit;
+                overall_GPA = (t_G - GPA * credit) / overall_credit;
+                return GradeBean(grade, GPA);
+            }
+        }
+    }
+    return GradeBean();
+}
+
 

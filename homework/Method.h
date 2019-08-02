@@ -36,6 +36,14 @@ public:
     virtual void exit2Menu() = 0;
 
     virtual void readFromLocal() = 0;
+
+    virtual void deleteScores() = 0;
+
+    virtual void fixScores() = 0;
+
+    virtual void displayAll() = 0;
+
+    virtual void safeExit() = 0;
 };
 
 
