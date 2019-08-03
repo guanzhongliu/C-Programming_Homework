@@ -75,47 +75,124 @@ void GradeSystem::addInformationByFile() {
         std::string name, id, sub;
         int num;
         in >> name >> id >> num;
-        students.push_back(Profile(name, id));
-        Profile &a = students.back();
-        for (int i = 0; i < num; i++) {
-            double credit;
-            int grade, dir;
-            in >> sub >> credit >> grade >> dir;
-            try {
-                if (in.fail())
-                    throw 1;
-            }                   // 异常处理 防止出现输入格式错误导致程序崩溃
-            catch (int) {
-                in.clear();
-                in.sync();
-                std::cout << "学生 " << a.name << " 的" << "科目 " << sub << " 输入格式出现了错误，读取过程结束" << std::endl;
-                std::cout << " 在此学生以前的学生成绩均已成功登记，请修正输入文件格式后再登记其余同学的成绩" << std::endl;
-                students.pop_back();   // 输入错误的学生信息将被删除
-                return;
-            }
-            Subject subject(sub, credit, grade, dir);
-            addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
-
-            double c, g, G, sum_g, sum_G;
-            int r;
-            students.back().getAll(G, g, c, r);
-            sum_g = g * c;
-            sum_G = G * c;
-            c += credit;
-            g = (sum_g + grade * credit) / c;
-            G = (sum_G + subject.getGPA() * credit) / c;
-            students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
-
-            if (subject.dir == 1) {
-                a.addCommonSubject(subject);
-                a.num_com++;
-            } else {
-                a.addElectiveSubject(subject);
-                a.num_elec++;
-            }
+        int k;
+        for (k = 0; k < students.size(); k++) {
+            if (students[k].id == id && students[k].name == name)
+                break;
         }
-        std::cout << "您本次为学生 " << a.name << " 登记了 " << a.num_com << " 门必修课成绩和 " << a.num_elec << " 门选修课成绩"
-                  << std::endl;
+        if (k == students.size()) {
+            students.push_back(Profile(name, id));
+            Profile &a = students.back();
+            for (int i = 0; i < num; i++) {
+                double credit;
+                int grade, dir;
+                in >> sub >> credit >> grade >> dir;
+                try {
+                    if (in.fail())
+                        throw 1;
+                }                   // 异常处理 防止出现输入格式错误导致程序崩溃
+                catch (int) {
+                    in.clear();
+                    in.sync();
+                    std::cout << "学生 " << a.name << " 的" << "科目 " << sub << " 输入格式出现了错误，读取过程结束" << std::endl;
+                    std::cout << " 在此学生以前的学生成绩均已成功登记，请修正输入文件格式后再登记其余同学的成绩" << std::endl;
+                    students.pop_back();   // 输入错误的学生信息将被删除
+                    return;
+                }
+                Subject subject(sub, credit, grade, dir);
+                addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
+
+                double c, g, G, sum_g, sum_G;
+                int r;
+                students.back().getAll(G, g, c, r);
+                sum_g = g * c;
+                sum_G = G * c;
+                c += credit;
+                g = (sum_g + grade * credit) / c;
+                G = (sum_G + subject.getGPA() * credit) / c;
+                students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
+
+                if (subject.dir == 1) {
+                    a.addCommonSubject(subject);
+                    a.num_com++;
+                } else {
+                    a.addElectiveSubject(subject);
+                    a.num_elec++;
+                }
+            }
+            std::cout << "您本次为学生 " << a.name << " 登记了 " << a.num_com << " 门必修课成绩和 " << a.num_elec << " 门选修课成绩"
+                      << std::endl;
+        } else {                // 此学生已在系统内
+            Profile &a = students[k];
+            for (int i = 0; i < num; i++) {
+                double credit;
+                int grade, dir;
+                in >> sub >> credit >> grade >> dir;
+                try {
+                    if (in.fail())
+                        throw 1;
+                }                   // 异常处理 防止出现输入格式错误导致程序崩溃
+                catch (int) {
+                    in.clear();
+                    in.sync();
+                    std::cout << "学生 " << a.name << " 的" << "科目 " << sub << " 输入格式出现了错误，读取过程结束" << std::endl;
+                    std::cout << " 在此学生以前的学生成绩均已成功登记，请修正输入文件格式后再登记其余同学的成绩" << std::endl;
+                    return;
+                }
+                Subject subject(sub, credit, grade, dir);
+                int l;
+                std::vector<Subject> ss;
+                if (dir == 1) {
+                    students[k].getCommonSubjects(ss);
+                } else {
+                    students[k].getElectiveSubjects(ss);
+                }
+                for (l = 0; l < ss.size(); l++) {
+                    if (ss[l].name == subject.getName()) {
+                        break;
+                    }
+                }
+                if (l == ss.size()) {
+                    addScore(sub, subject.getGPA(), grade, credit, dir);        // 该学生未登记过此成绩
+                    double c, g, G, sum_g, sum_G;
+                    int r;
+                    students[k].getAll(G, g, c, r);
+                    sum_g = g * c;
+                    sum_G = G * c;
+                    c += credit;
+                    g = (sum_g + grade * credit) / c;
+                    G = (sum_G + subject.getGPA() * credit) / c;
+                    students[k].setAll(G, g, c, r);                         // 实时统计此学生成绩
+
+                    if (subject.dir == 1) {
+                        a.addCommonSubject(subject);
+                        a.num_com++;
+                    } else {
+                        a.addElectiveSubject(subject);
+                        a.num_elec++;
+                    }
+                } else {
+                    GradeBean gra = students[k].fixCourse(subject.getName(), subject.dir, subject.getGrade());
+                    for (int v = 0; v < scores.size(); v++) {
+                        if (scores[v].name == subject.getName()) {
+                            int grade = gra.grade;
+                            double GPA = gra.GPA, t_g, t_G;
+                            if (scores[v].studentNum == 1) {
+                                scores.erase(scores.begin() + v);
+                                break;
+                            }
+                            t_g = scores[v].grade * scores[v].studentNum;
+                            t_G = scores[v].GPA * scores[v].studentNum;
+                            scores[v].grade = (t_g - grade) / scores[v].studentNum;
+                            scores[v].GPA = (t_G - GPA) / scores[v].studentNum;
+                            break;
+                        }
+                    }
+                }
+            }
+
+        }
+
     }
     in.close();
     exit2Menu();
@@ -141,49 +218,130 @@ void GradeSystem::addInformationByTap() {
             addInformationByTap();
             return;
     }
-    students.push_back(Profile(name, id));
-    std::cout << "请按照如下格式输入该学生的成绩：" << std::endl;
-    std::string sub;
-    int grade, dir;
-    double credit;
-    std::cout << "科目  科目学分  成绩  课程类型（1必修 0选修）(四个项目均为0则代表结束）" << std::endl;
-    while (1) {
-        std::cin >> sub >> credit >> grade >> dir;
-        try {
-            if (std::cin.fail())
-                throw 1;
-        }                   // 异常处理 防止出现输入格式错误导致程序崩溃
-        catch (int) {
-            std::cin.clear();
-            std::cin.sync();
-            std::cout << "输入格式出现了错误, 请从科目名称开始重新输入当前科目：" << std::endl;
-            continue;
-        }
-        if (sub == "0" && grade == 0 && credit == 0 && dir == 0)
+    int i;
+    for (i = 0; i < students.size(); i++) {
+        if (students[i].name == name && students[i].id == id) {
             break;
-        Subject subject(sub, credit, grade, dir);
-        addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
-
-        double c, g, G, sum_g, sum_G;
-        int r;
-        students.back().getAll(G, g, c, r);
-        sum_g = g * c;
-        sum_G = G * c;
-        c += credit;
-        g = (sum_g + grade * credit) / c;
-        G = (sum_G + subject.getGPA() * credit) / c;
-        students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
-
-        if (subject.dir == 1) {
-            students.back().addCommonSubject(subject);
-            students.back().num_com++;
-        } else {
-            students.back().addElectiveSubject(subject);
-            students.back().num_elec++;
         }
     }
-    Profile a = students.back();
-    std::cout << "您本次为学生 " << a.name << " 登记了 " << a.num_com << " 门必修课成绩和 " << a.num_elec << " 门选修课成绩" << std::endl;
+    if (i == students.size()) {
+        students.push_back(Profile(name, id));
+        std::cout << "请按照如下格式输入该学生的成绩：" << std::endl;
+        std::string sub;
+        int grade, dir;
+        double credit;
+        std::cout << "科目  科目学分  成绩  课程类型（1必修 0选修）(四个项目均为0则代表结束）" << std::endl;
+        while (1) {
+            std::cin >> sub >> credit >> grade >> dir;
+            try {
+                if (std::cin.fail())
+                    throw 1;
+            }                   // 异常处理 防止出现输入格式错误导致程序崩溃
+            catch (int) {
+                std::cin.clear();
+                std::cin.sync();
+                std::cout << "输入格式出现了错误, 请从科目名称开始重新输入当前科目：" << std::endl;
+                continue;
+            }
+            if (sub == "0" && grade == 0 && credit == 0 && dir == 0)
+                break;
+            Subject subject(sub, credit, grade, dir);
+            addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
+
+            double c, g, G, sum_g, sum_G;
+            int r;
+            students.back().getAll(G, g, c, r);
+            sum_g = g * c;
+            sum_G = G * c;
+            c += credit;
+            g = (sum_g + grade * credit) / c;
+            G = (sum_G + subject.getGPA() * credit) / c;
+            students.back().setAll(G, g, c, r);                         // 实时统计此学生成绩
+
+            if (subject.dir == 1) {
+                students.back().addCommonSubject(subject);
+                students.back().num_com++;
+            } else {
+                students.back().addElectiveSubject(subject);
+                students.back().num_elec++;
+            }
+        }
+        Profile a = students.back();
+        std::cout << "您本次为学生 " << a.name << " 登记了 " << a.num_com << " 门必修课成绩和 " << a.num_elec << " 门选修课成绩" << std::endl;
+    } else {
+        std::cout << "请按照如下格式输入该学生的成绩：" << std::endl;
+        std::string sub;
+        int grade, dir;
+        double credit;
+        std::cout << "科目  科目学分  成绩  课程类型（1必修 0选修）(四个项目均为0则代表结束）" << std::endl;
+        while (1) {
+            std::cin >> sub >> credit >> grade >> dir;
+            try {
+                if (std::cin.fail())
+                    throw 1;
+            }                   // 异常处理 防止出现输入格式错误导致程序崩溃
+            catch (int) {
+                std::cin.clear();
+                std::cin.sync();
+                std::cout << "输入格式出现了错误, 请从科目名称开始重新输入当前科目：" << std::endl;
+                continue;
+            }
+            if (sub == "0" && grade == 0 && credit == 0 && dir == 0)
+                break;
+            Subject subject(sub, credit, grade, dir);
+            int l;
+            std::vector<Subject> ss;
+            if (dir == 1) {
+                students[i].getCommonSubjects(ss);
+            } else {
+                students[i].getElectiveSubjects(ss);
+            }
+            for (l = 0; l < ss.size(); l++) {
+                if (ss[l].name == subject.getName()) {
+                    break;
+                }
+            }
+            if (l == ss.size()) {
+                addScore(sub, subject.getGPA(), grade, credit, dir);        // 在系统中加入新科目
+                double c, g, G, sum_g, sum_G;
+                int r;
+                students[i].getAll(G, g, c, r);
+                sum_g = g * c;
+                sum_G = G * c;
+                c += credit;
+                g = (sum_g + grade * credit) / c;
+                G = (sum_G + subject.getGPA() * credit) / c;
+                students[i].setAll(G, g, c, r);                         // 实时统计此学生成绩
+
+                if (subject.dir == 1) {
+                    students[i].addCommonSubject(subject);
+                    students[i].num_com++;
+                } else {
+                    students[i].addElectiveSubject(subject);
+                    students[i].num_elec++;
+                }
+            } else {
+                GradeBean gra = students[i].fixCourse(subject.getName(), subject.dir, subject.getGrade());
+                for (int v = 0; v < scores.size(); v++) {
+                    if (scores[v].name == subject.getName()) {
+                        int grade = gra.grade;
+                        double GPA = gra.GPA, t_g, t_G;
+                        if (scores[v].studentNum == 1) {
+                            scores.erase(scores.begin() + v);
+                            break;
+                        }
+                        t_g = scores[v].grade * scores[v].studentNum;
+                        t_G = scores[v].GPA * scores[v].studentNum;
+                        scores[v].grade = (t_g - grade) / scores[v].studentNum;
+                        scores[v].GPA = (t_G - GPA) / scores[v].studentNum;
+                        break;
+                    }
+                }
+
+            }
+        }
+
+    }
     exit2Menu();
 }
 

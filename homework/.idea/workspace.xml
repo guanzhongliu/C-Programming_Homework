@@ -12,8 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="全部功能完成">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/GradeSystem.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/GradeSystem.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.exe" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,6 +134,7 @@
       <workItem from="1564743913163" duration="12522000" />
       <workItem from="1564797930154" duration="1272000" />
       <workItem from="1564799534198" duration="4053000" />
+      <workItem from="1564804476344" duration="4082000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
