@@ -23,6 +23,7 @@ int main() {
         switch (move - '0') {
             case 0:
                 gradeSystem.safeExit();
+                return 0;
                 break;
             case 1:
                 gradeSystem.addStudent();
@@ -51,6 +52,7 @@ int main() {
                 std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         5.修改学生成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
                 std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         6.查看成绩总览         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
                 std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         0.安全退出系统         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+                std::cout << "Tip: 建议您使用安全退出，强行关闭程序可能会导致数据丢失。" << std::endl;
                 continue;
         }
     }

@@ -178,7 +178,6 @@ GradeBean Profile::fixCourse(std::string name, int dir, int value) {
         }
     }
 
-
     return GradeBean();
 }
 

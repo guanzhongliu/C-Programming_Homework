@@ -20,6 +20,10 @@ int compareGrade2(GradeBean a, GradeBean b) {
     return a.grade > b.grade;
 }
 
+int sortById(Profile a, Profile b) {
+    return a.id < b.id;
+}
+
 void GradeSystem::introduction() {
     std::cout << "***************************************************************************" << std::endl;
     std::cout << "〓〓〓〓〓〓〓〓〓〓  ☆   学 生 成 绩 管 理 系  统     ☆  〓〓〓〓〓〓〓〓〓〓" << std::endl;
@@ -31,6 +35,7 @@ void GradeSystem::introduction() {
     std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         5.修改学生成绩         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
     std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         6.查看成绩总览         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
     std::cout << "〓〓〓〓〓〓〓〓〓★  ☆         0.安全退出系统         ☆  ★〓〓〓〓〓〓〓〓〓" << std::endl;
+    std::cout << "Tip: 建议您使用安全退出，强行关闭程序可能会导致数据丢失。" << std::endl;
 }
 
 // 通过学生学号查询
@@ -604,10 +609,59 @@ void GradeSystem::fixScores() {
 }
 
 void GradeSystem::displayAll() {
+    sort(students.begin(), students.end(), sortById);
+    std::cout << "——————学生成绩统计——————" << std::endl;
+    for (int i = 0; i < students.size(); i++) {
+        showStudentDetailbyId(students[i].id);
+        std::cout << std::endl;
+    }
+    StacticScore a;
+    std::vector<Subject> sub;
+    double GPA = 0, grade = 0, credit = 0;
+    std::cout << "——————科目成绩统计——————" << std::endl;
+    for (int i = 0; i < scores.size(); i++) {
+        a = scores[i];
+        credit += a.credit;
+        GPA += a.GPA * a.credit;
+        grade += a.grade * a.credit;
+        std::string type = (a.dir) ? "必修" : "选修";
+        std::cout << "科目名称： " << a.name << "    科目学分： " << a.credit << "    科目类型： " << type << std::endl;
+        std::cout << "年级平均GPA： " << a.GPA << "      年级平均成绩： " << a.grade << std::endl;
+        std::cout << std::endl;
+    }
+    std::cout << std::endl << "年级平均总GPA： " << GPA / credit << "      年级平均总成绩： " << grade / credit << std::endl;
+    exit2Menu();
 
 }
 
 void GradeSystem::safeExit() {
+    std::cout << "正在保存学生信息到本地....." << std::endl;
+    char buff[1000];
+    _getcwd(buff, 1000);        // 获取当前生成的exe程序的绝对路径
+    strcat(buff, "\\local_save.txt");
+    bool flag = remove(buff);  // remove()函数返回值为0或EPF(-1)
+    if (flag == 0)
+        std::cout << "过期存档删除成功！" << std::endl;
+    else {
+        std::cout << "不存在存档..." << std::endl;
+    }
+    std::ofstream OutFile(buff);
+    OutFile << students.size() << std::endl;
+    for (int i = 0; i < students.size(); i++) {
+        std::vector<Subject> all;
+        OutFile << students[i].name << " " << students[i].id << " " << students[i].num_elec + students[i].num_com
+                << std::endl;
+        students[i].getCommonSubjects(all);
+        students[i].getElectiveSubjects(all);
+        for (int j = 0; j < all.size(); j++) {
+            Subject subject = all[j];
+            OutFile << subject.name << "   " << subject.getCredit() << "   " << subject.getGrade() << "  "
+                    << subject.dir << std::endl;
+        }
+        OutFile << std::endl;
+    }
+    std::cout << "新存档保存成功，已安全退出..." << std::endl;
+    OutFile.close();
 
 }
 

@@ -12,13 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb2e5ed-ea44-40d7-8bea-877cf6bb29d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GradeSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GradeSystem.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Subject.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/homework.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/homework.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/homework.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/local_save.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/local_save.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +29,20 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FindInProjectRecents">
@@ -50,7 +65,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -118,7 +133,8 @@
       <workItem from="1564632164981" duration="19384000" />
       <workItem from="1564718655877" duration="164000" />
       <workItem from="1564728916940" duration="614000" />
-      <workItem from="1564743913163" duration="7384000" />
+      <workItem from="1564743913163" duration="12522000" />
+      <workItem from="1564797930154" duration="335000" />
     </task>
     <task id="LOCAL-00001" summary="第一部分完成">
       <created>1564052674321</created>
@@ -197,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564749386793</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="学生成绩修改">
+      <created>1564751388162</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1564751388162</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +252,7 @@
     <MESSAGE value="加权排名" />
     <MESSAGE value="排名系统完成~" />
     <MESSAGE value="学生成绩删除" />
-    <option name="LAST_COMMIT_MESSAGE" value="学生成绩删除" />
+    <MESSAGE value="学生成绩修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="学生成绩修改" />
   </component>
 </project>
