@@ -1,4 +1,4 @@
-# Programming-practice
+# C++ Programming_Homework
 C++程序设计作业，学生成绩管理系统。
 
 如果没有安装Markdown阅读器建议查看pdf版，体验更好。
